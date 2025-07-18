@@ -1,0 +1,17 @@
+
+import 'cypress-file-upload';
+
+describe('Upload Gambar - Test Terpisah', () => {
+  it('Harus bisa mengunggah gambar (Skenario Terpisah: input[type="file"])', () => {
+    const demoUrl = 'https://testautomationpractice.blogspot.com/';
+    cy.visit(demoUrl);
+
+    // Nama file sesuai dengan path relatif dari folder fixtures
+    const fileName = 'image.jpeg'; // file disimpan di cypress/fixtures/image.jpeg
+
+    cy.get('input[type="file"]').attachFile(fileName);
+
+    // Verifikasi tambahan (jika ada preview, alert, dll bisa dicek di sini)
+    cy.log('Gambar berhasil diunggah.');
+  });
+});
