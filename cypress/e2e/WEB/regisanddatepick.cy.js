@@ -1,5 +1,4 @@
-/// <reference types="cypress" />
-
+// Test registration, datepicker and upload file
 describe('Automasi Website Demo: Registration & Date Picker', () => {
     const demoUrl = 'https://testautomationpractice.blogspot.com/';
 
